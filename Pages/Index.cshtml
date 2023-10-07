@@ -5,22 +5,5 @@
     <button type="submit">Enviar Vídeo</button>
 </form>
 <div id="result"></div>
-
-@section scripts {
-    <script>
-        $('form').submit(function (event) {
-            event.preventDefault();
-            var formData = new FormData(this);
-            $.ajax({
-                url: '/Index?handler=ProcessVideo',
-                type: 'POST',
-                data: formData,
-                processData: false,
-                contentType: false,
-                success: function (data) {
-                    $('#result').html('Informações do vídeo: ' + JSON.stringify(data));
-                }
-            });
-        });
-    </script>
-}
+<script src="~/js/site.js">
+</script>
