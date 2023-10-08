@@ -20,6 +20,10 @@ Caso não esteja, baixe o FFmpeg em https://ffmpeg.org/download.html e siga as i
 
 Importante: no Arquivo `Program.cs`, na linha 9, altere o valor da variável `FFMPEG_PATH` de acordo com o caminho de instalação do FFmpeg no seu sistema operacional. O meu, por exemplo, está instalado em `C:\ffmpeg\bin` e por isso o valor da variável é `@"C:\ffmpeg\bin"`.
 
+# Como Executar
+
+Faça o clone do repositório, execute o comando `dotnet restore` na pasta raiz do projeto para baixar as dependencias e execute o comando `dotnet run` para iniciar a aplicação.
+
 # Como funciona
 
-A aplicação é composta por uma única página, `Index.cshtml`, que contém um formulário para upload de arquivos e uma tabela para exibir as informações do arquivo.
+A aplicação é composta por uma única página, `Index.cshtml`, que contém um input para upload de um arquivo de vídeo. Após o upload, o arquivo é processado pelo FFmpeg e as informações são exibidas na tela, sem a necessidade de recarregar a página, em formato JSON.

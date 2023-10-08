@@ -1,8 +1,11 @@
 ﻿@page
 @model IndexModel
 <form method="post" enctype="multipart/form-data">
-    <input type="file" name="videoFile" accept="video/*" />
-    <button type="submit">Enviar Vídeo</button>
+  <div class="mb-3 d-flex flex-row">
+    <input type="file" name="videoFile" accept="video/*" class="form-control" aria-describedby="helpId" />
+    <button type="submit" class="btn btn-primary mr-2">Enviar</button>
+  </div>
+  <small id="helpId" class="form-text text-muted">Escolha um vídeo legal</small>
 </form>
 <pre id="jsonDisplay"></pre>
 <script src="/js/site.js"></script>
