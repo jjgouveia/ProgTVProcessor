@@ -6,6 +6,8 @@ namespace ProgTVProcessor
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            Environment.SetEnvironmentVariable("FFMPEG_PATH", @"C:\ffmpeg\bin");
+
             // Add services to the container.
             builder.Services.AddRazorPages();
 
