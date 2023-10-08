@@ -12,13 +12,13 @@ Desafio técnico para a vaga de desenvolvedor .NET na ProgramadorTV. O desafio c
 
 - [Xabe.FFMpeg](https://github.com/tomaszzmuda/Xabe.FFMpeg): Biblioteca .NET para trabalhar com FFmpeg.
 
-# Como usar
+# Informação importante
 
 A aplicação requer que o FFmpeg esteja instalado e, preferencialmente, configurado no PATH do sistema operacional.
 
 Caso não esteja, baixe o FFmpeg em https://ffmpeg.org/download.html e siga as instruções de instalação para o seu sistema operacional.
 
-Importante: no Arquivo `Program.cs`, na linha 9, altere o valor da variável `FFMPEG_PATH` de acordo com o caminho de instalação do FFmpeg no seu sistema operacional. O meu, por exemplo, está instalado em `C:\ffmpeg\bin` e por isso o valor da variável é `@"C:\ffmpeg\bin"`.
+Importante: no Arquivo `rogram.cs`, na linha 9, altere o valor da variável `FFMPEG_PATH` de acordo com o caminho de instalação do FFmpeg no seu sistema operacional. O meu, por exemplo, está instalado em `C:\ffmpeg\bin` e por isso o valor da variável é `@"C:\ffmpeg\bin"`.
 
 # Como Executar
 
@@ -26,4 +26,4 @@ Faça o clone do repositório, execute o comando `dotnet restore` na pasta raiz 
 
 # Como funciona
 
-A aplicação é composta por uma única página, `Index.cshtml`, que contém um input para upload de um arquivo de vídeo. Após o upload, o arquivo é processado pelo FFmpeg e as informações são exibidas na tela, sem a necessidade de recarregar a página, em formato JSON.
+A aplicação é composta por uma única página, `Index.cshtml`, que contém um input para upload de um arquivo de vídeo. Após o upload, o arquivo é processado pelo FFmpeg e as informações são exibidas na tela, sem a necessidade de recarregar a página, em formato JSON. É possível fazer o download dos dados do JSON no botão "Baixar JSON"
