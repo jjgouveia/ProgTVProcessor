@@ -1,6 +1,10 @@
 # ProgTVProcessor
 
-Desafio técnico para a vaga de desenvolvedor .NET na ProgramadorTV. O desafio consistiu em gerar uma aplicação com Razor Pages que permitisse upar um vídeo e, sem reiniciar a página, processá-lo e exibir as mais diversas informações sobre do arquivo, como duração, resolução, bitrate, etc.
+Desafio técnico para a vaga de desenvolvedor .NET na ProgramadorTV. O desafio consistiu em gerar uma aplicação com Razor Pages que permitisse upar um vídeo e enviá-lo, sem reiniciar a página, para processamento no back-end. Como resultado, as mais diversas informações sobre o arquivo, como título, formato, duração, resolução, codec, etc deveriam ser exibidas de volta no front. Utilizei o FFmpeg para processar o vídeo e a biblioteca Xabe.FFMpeg para facilitar a integração. Nas requisições JavaScript utilizei o próprio JQuery imbutido na aplicação para facilitar a manipulação do DOM e requisitar os dados do back-end com AJAX.
+
+# Demonstração
+
+<img src="./demo_prog_tv_processor.gif" alt="ProgTVProcessor em ação 🦸🏾‍♂️" title="ProgTVProcessor em ação 🦸🏾‍♂️">
 
 # Tecnologias
 
@@ -18,7 +22,7 @@ A aplicação requer que o FFmpeg esteja instalado e, preferencialmente, configu
 
 Caso não esteja, baixe o FFmpeg em https://ffmpeg.org/download.html e siga as instruções de instalação para o seu sistema operacional.
 
-Importante: no Arquivo `rogram.cs`, na linha 9, altere o valor da variável `FFMPEG_PATH` de acordo com o caminho de instalação do FFmpeg no seu sistema operacional. O meu, por exemplo, está instalado em `C:\ffmpeg\bin` e por isso o valor da variável é `@"C:\ffmpeg\bin"`.
+Importante: no Arquivo `Program.cs`, na linha 9, altere o valor da variável `FFMPEG_PATH` de acordo com o caminho de instalação do FFmpeg no seu sistema operacional. O meu, por exemplo, está instalado em `C:\ffmpeg\bin` e por isso o valor da variável é `@"C:\ffmpeg\bin"`.
 
 # Como Executar
 
@@ -26,4 +30,4 @@ Faça o clone do repositório, execute o comando `dotnet restore` na pasta raiz 
 
 # Como funciona
 
-A aplicação é composta por uma única página, `Index.cshtml`, que contém um input para upload de um arquivo de vídeo. Após o upload, o arquivo é processado pelo FFmpeg e as informações são exibidas na tela, sem a necessidade de recarregar a página, em formato JSON. É possível fazer o download dos dados do JSON no botão "Baixar JSON"
+A aplicação é composta por uma única página, `Index.cshtml`, que contém um input para upload de um arquivo de vídeo e um botão de envio. Após o upload, o arquivo é processado pelo FFmpeg e as informações são exibidas na tela, sem a necessidade de recarregar a página, em formato JSON. É possível fazer o download dos dados do JSON no botão "Baixar JSON"
