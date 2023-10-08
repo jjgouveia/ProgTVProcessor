@@ -5,9 +5,8 @@ namespace ProgTVProcessor
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
+            //Preferi deixar o caminho como varíavel porque na minha máquina ele não localizou o PATH de forma alguma.
             Environment.SetEnvironmentVariable("FFMPEG_PATH", @"C:\ffmpeg\bin");
-
             // Add services to the container.
             builder.Services.AddRazorPages();
 
