@@ -21,7 +21,16 @@ public class IndexModel : PageModel
 
         if (videoFile != null && videoFile.Length > 0)
         {
+
+            var tempDirectory = Path.Combine(_environment.ContentRootPath, "wwwroot", "temp");
+            if (!Directory.Exists(tempDirectory))
+            {
+                Directory.CreateDirectory(tempDirectory);
+            }
+
             var tempFilePath = Path.Combine(_environment.ContentRootPath, "wwwroot", "temp", videoFile.FileName);
+
+
             using (var stream = new FileStream(tempFilePath, FileMode.Create))
             {
                 videoFile.CopyTo(stream);
